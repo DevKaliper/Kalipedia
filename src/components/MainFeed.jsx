@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import * as React from "react";
-
+import Grid from "@mui/material/Grid";
 import { list } from "../CONST";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -15,7 +15,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Container, Grid } from "@mui/material";
+import { Home } from "./Home";
 
 const drawerWidth = 240;
 
@@ -58,7 +58,11 @@ function MainFeed(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        style={{ backgroundColor: "transparent", backdropFilter: "blur(5px)", boxShadow: "none"}}
+        style={{
+          backgroundColor: "transparent",
+          backdropFilter: "blur(5px)",
+          boxShadow: "none",
+        }}
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
@@ -129,20 +133,22 @@ function MainFeed(props) {
         <Grid
           container
           spacing={2}
-          
           columns={16}>
           <Grid
             item
-            sx={{pr:2}}
+            sx={{ pr: 2 }}
             xs={12}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure, temporibus facere possimus quasi natus rerum obcaecati consequuntur nisi earum, necessitatibus ad ea. Eaque libero enim eveniet facere, necessitatibus soluta?
-            </Grid>
+            <Home />
+          </Grid>
           <Grid
             item
             sx={{ backgroundColor: "#1A1A1A" }}
             xs={4}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae magni amet doloremque natus nisi, quibusdam, odit, expedita quas magnam quia porro facilis nostrum? Temporibus dignissimos dolorem velit dolore, totam cum.
-            </Grid>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            magni amet doloremque natus nisi, quibusdam, odit, expedita quas
+            magnam quia porro facilis nostrum? Temporibus dignissimos dolorem
+            velit dolore, totam cum.
+          </Grid>
         </Grid>
       </Box>
     </Box>
