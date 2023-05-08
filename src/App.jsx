@@ -1,22 +1,16 @@
-import { Container } from '@mui/material';
-import {useState} from 'react'
-import SearchAppBar from './components/SearchAppBar';
-import NavBar from './components/NavBar';
+
+import MainFeed from "./components/MainFeed";
 
 function App() {
-  const [open, setOpen] = useState(false);
 
- 
   return (
     <>
-  
-    <SearchAppBar setOpen={setOpen}/>
-    <NavBar open={open} setOpen={setOpen}/>
-    <Container>
 
-      
-    </Container>
+
+      <MainFeed/>
+
   
+
 
     </>
   );

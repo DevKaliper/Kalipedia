@@ -63,10 +63,13 @@ export default function SearchAppBar({setOpen}) {
         <Toolbar>
           <IconButton 
             size="large"
+            component="label"
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={() => setOpen(true)}
+            htmlFor="my-drawer-2" 
+            className="btn btn-primary drawer-button lg:hidden"
             
             sx={{ mr: 2 , display: { xs: 'block', md: 'none' }}}
           >

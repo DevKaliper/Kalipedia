@@ -1,29 +1,40 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import { ThemeProvider } from '@mui/material/styles';
-import { createTheme } from '@mui/material'
-import './index.css'
-import App from './App';
-const theme = createTheme( {
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline, createTheme } from "@mui/material";
+import "./index.css";
+import App from "./App";
+const theme = createTheme({
   palette: {
-    type: 'light',
+    type: 'dark',
     primary: {
-      main: '#6f8a2f',
+      main: '#242424',
     },
     secondary: {
-      main: '#b8d274',
+      main: '#1A1A1A',
     },
-    error: {
-      main: '#d50000',
+    background: {
+      default: '#212121',
+      paper: '#424242',
     },
-    divider: '#88a246',
+    text: {
+      primary: '#E3E3E3',
+      secondary: '#E3E3E3',
+      hint:"#7B7B7B",
+    },
+
   },
 });
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode> 
+    <CssBaseline/>
     <ThemeProvider theme={theme}>
-    <App />
+     
+        <App/>
+    
+      
     </ThemeProvider>
-  </React.StrictMode>,
-)
+
+  </React.StrictMode>
+);
