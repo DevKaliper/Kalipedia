@@ -3,5 +3,7 @@
 @tailwind utilities;
 
 
-
+.main{
+    @apply flex flex-col gap-8 p-5 xl:grid xl:grid-cols-[1fr_0.4fr] xl:grid-rows-[1fr] xl:gap-x-5 xl:gap-y-5;
+}
 

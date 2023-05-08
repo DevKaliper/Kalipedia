@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import Stack from "@mui/material/Stack";
 import * as React from "react";
-import Grid from "@mui/material/Grid";
-import { list } from "../CONST";
+
+
+import { list, icons } from "../CONST";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,6 +18,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Home } from "./Home";
+import News from "./News";
+import { ModoSwitch } from "./ModoSwitch";
 
 const drawerWidth = 240;
 
@@ -79,9 +83,33 @@ function MainFeed(props) {
           <Typography
             variant="h6"
             noWrap
+            className="hidden md:block"
+            sx={{ flexGrow: 1 }}
             component="div">
             Kalipedia
           </Typography>
+          <ModoSwitch />
+          <Divider
+            orientation="vertical"
+            flexItem
+            sx={{ bgcolor: "#fff", mx: "10px" }}
+          />
+          <Stack sx={{display: "flex" ,flexDirection:"row", gap:2, color:"text.hint"}}>
+            {icons.map((icon, index) => {
+              return (
+                <IconButton
+                  key={index}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 2,
+                    color: "text.hint",
+                  }}>
+                  {icon}
+                </IconButton>
+              );
+            })}
+          </Stack>
         </Toolbar>
       </AppBar>
       <Box
@@ -130,26 +158,10 @@ function MainFeed(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}>
         <Toolbar />
-        <Grid
-          container
-          spacing={2}
-          columns={16}>
-          <Grid
-            item
-            sx={{ pr: 2 }}
-            xs={12}>
-            <Home />
-          </Grid>
-          <Grid
-            item
-            sx={{ backgroundColor: "#1A1A1A" }}
-            xs={4}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            magni amet doloremque natus nisi, quibusdam, odit, expedita quas
-            magnam quia porro facilis nostrum? Temporibus dignissimos dolorem
-            velit dolore, totam cum.
-          </Grid>
-        </Grid>
+        <div className="main">
+          <Home />
+          <News />
+        </div>
       </Box>
     </Box>
   );
