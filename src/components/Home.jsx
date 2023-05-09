@@ -23,7 +23,7 @@ export const Home = () => {
           ama la programación y el desarrollo fullstack con
           <span className="kalipediaTitle"> React.</span> En este blog personal,
           quiero compartir mis proyectos y avances en este emocionante mundo
-          de la tecnología. Desde que comencé a aprender programación,<span
+          de la tecnología. Desde que comencé a aprender programación ,<span
             className="kalipediaTitle"
             >siempre me ha fascinado la posibilidad de crear algo desde
             cero,
