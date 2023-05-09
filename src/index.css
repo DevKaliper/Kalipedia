@@ -7,3 +7,12 @@
     @apply flex flex-col gap-8 p-5 xl:grid xl:grid-cols-[1fr_0.4fr] xl:grid-rows-[1fr] xl:gap-x-5 xl:gap-y-5;
 }
 
+.kalipediaTitle{
+    background: #CF7E2E;
+background: -webkit-linear-gradient(to right, #CF7E2E 0%, #916519 50%, #CFCFCF 100%);
+background: -moz-linear-gradient(to right, #CF7E2E 0%, #916519 50%, #CFCFCF 100%);
+background: linear-gradient(to right, #CF7E2E 0%, #916519 50%, #CFCFCF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
