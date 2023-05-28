@@ -20,12 +20,15 @@ import Typography from "@mui/material/Typography";
 import { Home } from "./Home";
 import News from "./News";
 import { ModoSwitch } from "./ModoSwitch";
+import Feed from "./Feed";
+import { useState } from "react";
 
 const drawerWidth = 240;
 
 function MainFeed(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [content, setContent] = useState(<Home />);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -159,7 +162,7 @@ function MainFeed(props) {
         }}>
         <Toolbar />
         <div className="main">
-          <Home />
+          <Feed content={content}/>
           <News />
         </div>
       </Box>
