@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import * as React from "react";
 
 
-import { list, icons } from "../CONST";
+import { list, icons } from "./Constant/CONST";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,18 +17,19 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Home } from "./Home";
-import News from "./News";
-import { ModoSwitch } from "./ModoSwitch";
-import Feed from "./Feed";
-import { useState } from "react";
+
+import News from "./pages/News";
+import { ModoSwitch } from "./components/ModoSwitch";
+import Feed from "./components/Feed";
+import { Link } from "react-router-dom";
+
 
 const drawerWidth = 240;
 
-function MainFeed(props) {
-  const { window } = props;
+function MainFeed({window, content}) {
+ 
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [content, setContent] = useState(<Home />);
+  
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -40,8 +41,9 @@ function MainFeed(props) {
       <Divider />
       <List>
         {list.top.map((text) => (
-          <ListItem
-            key={text}
+          <Link key={text} to={`/${text==="Home"? "" : text}`}>
+           <ListItem
+            
             disablePadding>
             <ListItemButton>
               <ListItemText
@@ -51,6 +53,9 @@ function MainFeed(props) {
               />
             </ListItemButton>
           </ListItem>
+          </Link>
+          
+         
         ))}
       </List>
       <Divider />
@@ -146,6 +151,7 @@ function MainFeed(props) {
               boxSizing: "border-box",
               width: drawerWidth,
               backgroundColor: "#1A1A1A",
+              
             },
           }}
           open>

@@ -1,3 +1,7 @@
+import { useState } from "react";
+import {news, addNews} from "../Constant/addNews"
+
+
 const News = () => {
   return (
     <section

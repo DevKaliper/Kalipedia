@@ -79,7 +79,7 @@ export default function SearchAppBar({ setOpen }) {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            Kalipedia
+            Kalissspedia
           </Typography>
           <Search>
             <SearchIconWrapper>

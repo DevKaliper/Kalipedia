@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 export const list = {
-    top: ["Home", "News", "About", "Github"],
+    top: ["Home", "News", "Simpsons", "Github"],
     bottom: ["Login", "Register"]
   
   }

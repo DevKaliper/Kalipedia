@@ -4,7 +4,9 @@ import ReactDOM from "react-dom/client";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline, createTheme } from "@mui/material";
 import "./index.css";
-import App from "./App";
+
+import { router } from "./router/Index";
+import { RouterProvider } from "react-router-dom";
 const theme = createTheme({
   palette: {
     type: 'dark',
@@ -31,7 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <CssBaseline/>
     <ThemeProvider theme={theme}>
      
-        <App/>
+    <RouterProvider router={router} />
     
       
     </ThemeProvider>
