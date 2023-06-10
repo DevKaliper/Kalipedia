@@ -12,6 +12,12 @@ const News = () => {
 
     return (
       <>
+      <div>
+
+
+      <h2 className=" kalipediaTitle text-blue-gray-900 mb-2 block text-center font-mono text-[65px] font-bold leading-[1.3] tracking-normal antialiased md:text-7xl">Articulos</h2>
+
+
       <article>
         {
           
@@ -63,6 +69,8 @@ const News = () => {
 
       </article>
   
+
+      </div>
    
    
       

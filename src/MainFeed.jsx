@@ -168,7 +168,7 @@ function MainFeed({window, content, asidee, clase}) {
         }}>
         <Toolbar />
         <div className={clase}>
-          <Feed content={content}/>
+          {content}
           {asidee}
           
           

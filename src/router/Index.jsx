@@ -4,8 +4,8 @@ import { Home } from "../pages/Home";
 import Simpsons from "../pages/Simpsons"
 import Youtubev3 from "../pages/Youtubev3"
 import News from "../pages/News"
-
 import NewsLayout from "../Layout/NewsLayout";
+import About from "../pages/About";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +24,10 @@ export const router = createBrowserRouter([
             {
                 path: "/youtubev3",
                 element: <Youtubev3 />,
+            },
+            {
+                path: "/about",
+                element: <About />,
             },
         ],
     },
