@@ -29,6 +29,12 @@ export const router = createBrowserRouter([
     },
     {
         path:"/news",
-        element:<NewsLayout content={<News/>}/>
+        element:<NewsLayout/>,
+        children:[
+            {
+                index:true,
+                element: <News/>
+            }
+        ]
     }
 ]);

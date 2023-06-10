@@ -7,7 +7,8 @@ export const news = [{
     crear una aplicación de clon de YouTube con ReactJS y
     TailwindCSS...`,
     img: "https://res.cloudinary.com/practicaldev/image/fetch/s--qITuC-EE--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0n9u7fer04ok7brz354x.png",
-    leer: "leer"
+    leer: "leer",
+    path: "/youtubev3"
 
 },
 {
@@ -17,7 +18,8 @@ export const news = [{
     beginning it was done only with html css, and a little bit of
     JS.`,
     img: "https://user-images.githubusercontent.com/122651755/226196204-99927fa0-3917-4580-93b5-ed84b2b91aa5.png",
-    leer: "leer"
+    leer: "leer",
+    path: "/simpsons"
     
 }
 

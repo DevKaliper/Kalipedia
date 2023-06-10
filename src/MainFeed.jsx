@@ -26,7 +26,7 @@ import AsideNews from "./pages/AsideNews";
 
 const drawerWidth = 240;
 
-function MainFeed({window, content, asidee, clas}) {
+function MainFeed({window, content, asidee, clase}) {
  
   const [mobileOpen, setMobileOpen] = React.useState(false);
   
@@ -167,13 +167,11 @@ function MainFeed({window, content, asidee, clas}) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}>
         <Toolbar />
-        <div className={
-          clas
-        }>
+        <div className={clase}>
           <Feed content={content}/>
           {asidee}
           
-          <AsideNews/>
+          
           
         </div>
       </Box>

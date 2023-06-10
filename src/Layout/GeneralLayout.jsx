@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom"
 import MainFeed from "../MainFeed"
-import AsideNews from "../pages/AsideNews"
+
+import News from "../pages/News"
 
 const GeneralLayout = () => { 
     return (<>
 
-    <MainFeed content={<Outlet/>} asidee={<AsideNews/>} clas={`main`}/>
+    <MainFeed content={<Outlet/>} asidee={<News/>} clase={`main`}/>
     
     
     </>)

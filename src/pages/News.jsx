@@ -19,13 +19,13 @@ const News = () => {
             <div key={item.id} className="relative top-4 mb-4" >
               <div className="shadow-card flex flex-col rounded-xl bg-white bg-clip-border">
                 <div className="" >
-                  <Link to="#">
+                  <Link to={item.path}>
                     <img src={item.img} alt="card image" className="w-auto rounded-lg" />
                   </Link>
 
                 </div>
                 <div className="flex-1 p-6 text-secondary">
-                  <Link to="#">
+                  <Link to={item.path}>
                     <h4 className="text-xl font-extrabold">
                       {item.title}
 
@@ -36,7 +36,7 @@ const News = () => {
                   </p>
                   <div className="flex w-full items-center justify-between">
                   
-                    <Link to="/" className="rounded-lg bg-orange-500 px-6 py-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">{item.leer}</Link>
+                    <Link to={item.path} className="rounded-lg bg-orange-500 px-6 py-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-yellow-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">{item.leer}</Link>
                  
                   <div
                     id="chips"
