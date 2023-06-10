@@ -19,28 +19,15 @@ export const news = [{
     img: "https://user-images.githubusercontent.com/122651755/226196204-99927fa0-3917-4580-93b5-ed84b2b91aa5.png",
     leer: "leer"
     
-}]
-
-
-export const addNews = (id, tittle, body, img  ) =>{
-    let noticias = [...news,{
-        id, 
-        tittle,
-        body,
-        img
-
-
-    }
-        
-    
-    ]
-
-    return noticias
-
-
-
-
 }
+
+
+
+]
+
+
+
+
 
 
 

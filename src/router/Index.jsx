@@ -3,8 +3,9 @@ import GeneralLayout from "../Layout/GeneralLayout";
 import { Home } from "../pages/Home";
 import Simpsons from "../pages/Simpsons"
 import Youtubev3 from "../pages/Youtubev3"
-import MainFeed from "../MainFeed";
-import News from "../pages/News";
+import News from "../pages/News"
+
+import NewsLayout from "../Layout/NewsLayout";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,6 @@ export const router = createBrowserRouter([
     },
     {
         path:"/news",
-        element:<MainFeed content={<News/>}/>
+        element:<NewsLayout content={<News/>}/>
     }
 ]);

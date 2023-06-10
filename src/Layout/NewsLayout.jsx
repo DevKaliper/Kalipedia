@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import Stack from "@mui/material/Stack";
 import * as React from "react";
-
-
-import { list, icons } from "./Constant/CONST";
+import { list, icons } from "../Constant/CONST";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,16 +15,15 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { ModoSwitch } from "./components/ModoSwitch";
-import Feed from "./components/Feed";
+import { ModoSwitch } from "../components/ModoSwitch";
+import Feed from "../components/Feed";
 import { Link } from "react-router-dom";
-import AsideNews from "./pages/AsideNews";
 
 
 
 const drawerWidth = 240;
 
-function MainFeed({window, content, asidee, clas}) {
+function NewsLayout({window, content}) {
  
   const [mobileOpen, setMobileOpen] = React.useState(false);
   
@@ -167,13 +164,10 @@ function MainFeed({window, content, asidee, clas}) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}>
         <Toolbar />
-        <div className={
-          clas
-        }>
+        <div className="mainNews">
           <Feed content={content}/>
-          {asidee}
           
-          <AsideNews/>
+          
           
         </div>
       </Box>
@@ -181,4 +175,4 @@ function MainFeed({window, content, asidee, clas}) {
   );
 }
 
-export default MainFeed;
+export default NewsLayout;
