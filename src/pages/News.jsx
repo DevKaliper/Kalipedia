@@ -33,7 +33,7 @@ const News = () => {
                 <div className="flex-1 p-6 text-secondary">
                   <Link to={item.path}>
                     <h4 className="text-xl font-extrabold">
-                      {item.title}
+                      {item.tittle}
 
                     </h4>
                   </Link>
